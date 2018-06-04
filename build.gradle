@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'org.xxfad.neuron'
+version '1.0-SNAPSHOT'
+def artifactId = "neuron1"
+
+sourceCompatibility = 1.8
+
+repositories {
+    maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+    maven {url 'http://neuroph.sourceforge.net/maven2/'}
+}
+
+dependencies {
+
+    compile 'org.neuroph:neuroph-core:2.94'
+//    compile 'org.slf4j:slf4j-log4j12:1.7.25'
+
+    testCompile 'org.testng:testng:+'
+}
+
+jar {
+    baseName = artifactId
+}
